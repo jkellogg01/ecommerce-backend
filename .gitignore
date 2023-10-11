@@ -1,3 +1,5 @@
+*.DS-STORE
+
 # Logs
 logs
 *.log
