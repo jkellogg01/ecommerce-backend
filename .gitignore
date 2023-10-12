@@ -1,5 +1,5 @@
 package-lock.json
-.DS-STORE
+*.DS-STORE
 
 # Logs
 logs
