@@ -53,9 +53,9 @@ const productTagData = [
 
 // const seedProductTags = () => ProductTag.bulkCreate(productTagData);
 
+// I could not in a million years tell you why doing it this way works and the code above does not.
 const seedProductTags = () => {
   productTagData.forEach((productTag, index) => {
-    console.log(index, productTag);
     ProductTag.create(productTag);
   });
 }
