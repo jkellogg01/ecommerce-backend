@@ -4,6 +4,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 // I don't think I understand what this is doing or what it's here for?
 const { Promise } = require('sequelize');
+const Category = require('./Category');
 
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Product extends Model {}
@@ -24,7 +25,7 @@ Product.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    productName: {
+    product_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -35,6 +36,9 @@ Product.init(
     stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
     },
   },
   {
